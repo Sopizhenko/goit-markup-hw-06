@@ -84,6 +84,19 @@ h3 {
 	font-weight: var(--font-weight-medium);
 }
 
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
 button {
 	font-family: inherit;
 	color: currentColor;
@@ -128,9 +141,8 @@ nav {
 	column-gap: var(--col-indent);
 }
 
-.team .cards,
-.portfolio .cards {
-	margin-top: 72px;
+.section-title {
+	margin-bottom: 72px;
 }
 
 .card {
@@ -141,8 +153,8 @@ nav {
 	padding: 32px 16px;
 }
 
-.card-text {
-	margin-top: 8px;
+.card-title {
+	margin-bottom: 8px;
 }
 
 /* #endregion */
@@ -203,13 +215,16 @@ nav {
 /*#endregion */
 
 /*#region Hero*/
+.hero-image {
+	padding: 188px 0;
+}
+
 .hero-image .container {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	gap: 48px;
-	padding: 188px 15px;
 }
 
 .hero-image {
@@ -218,6 +233,7 @@ nav {
 }
 
 .hero-text {
+	max-width: 496px;
 	font-size: 56px;
 	line-height: 1.07;
 	text-align: center;
@@ -225,6 +241,7 @@ nav {
 }
 
 .hero-button {
+	min-width: 169px;
 	font-family: inherit;
 	color: inherit;
 	background-color: var(--iris);
@@ -255,15 +272,23 @@ nav {
 	border-radius: 0 0 4px 4px;
 	box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
+
+.team .card-content {
+	padding: 32px 0;
+}
 /*#endregion */
 
 /*#region Portfolio*/
+.portfolio .cards {
+	row-gap: 48px;
+}
+
 .portfolio .card {
 	width: calc((100% - var(--col-indent) * (2)) / 3);
 }
 
 .portfolio .card-content {
-border-bottom: 1px solid var(--cornflower);
+	border-bottom: 1px solid var(--cornflower);
 	border-left: 1px solid var(--cornflower);
 	border-right: 1px solid var(--cornflower);
 }
@@ -276,12 +301,16 @@ footer {
 	padding: 100px 0;
 }
 
+.footer .logo {
+	display: inline-block;
+	margin-bottom: 16px;
+}
+
 .footer-logo {
 	color: var(--cloud);
 }
 
 .footer-text {
-	margin-top: 16px;
 	max-width: 264px;
 }
 /*#endregion */
